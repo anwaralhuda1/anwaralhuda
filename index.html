@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة أنوار الهدى المحدودة | Anwar Alhuda Co. Ltd</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      direction: rtl;
+      line-height: 1.6;
+      color: #333;
+      background: #f7f9fc;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      background: linear-gradient(90deg, #004aad, #0074d9);
+      color: white;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; font-size: 28px; }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    nav ul li a:hover { background: rgba(255,255,255,0.2); transform: scale(1.1); }
+
+    .lang-toggle {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.2);
+      font-weight: bold;
+    }
+    .lang-toggle:hover { background: #ffdd00; color: #004aad; }
+
+    .hero {
+      background: linear-gradient(to right, #0074d9, #00c6ff);
+      color: white; text-align: center; padding: 120px 20px;
+      transition: background 0.5s;
+    }
+    .hero h2 { font-size: 42px; margin-bottom: 20px; }
+    .hero p { font-size: 20px; }
+    .hero:hover { background: linear-gradient(to right, #0056a0, #00a0e0); }
+
+    .section { padding: 60px 20px; }
+    .section h2 { text-align: center; margin-bottom: 40px; font-size: 32px; color: #004aad; }
+
+    .services { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+    .service {
+      flex: 1 1 250px; background: white; margin: 10px;
+      padding: 25px; border-radius: 15px; text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(0,0,0,0.2); }
+    .service h3 { color: #0074d9; margin-bottom: 15px; }
+
+    form {
+      max-width: 600px; margin: auto; display: flex; flex-direction: column;
+    }
+    form input, form textarea {
+      width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px;
+      border: 1px solid #ccc; transition: border-color 0.3s, box-shadow 0.3s;
+      font-size: 16px;
+    }
+    form input:focus, form textarea:focus {
+      border-color: #0074d9; box-shadow: 0 0 8px rgba(0,116,217,0.3); outline: none;
+    }
+    form button {
+      background: linear-gradient(to right, #004aad, #0074d9);
+      color: white; border: none; padding: 15px 20px; cursor: pointer;
+      border-radius: 10px; font-size: 18px; transition: transform 0.3s, background 0.3s;
+    }
+    form button:hover { transform: scale(1.05); background: linear-gradient(to right, #0056a0, #00a0e0); }
+
+    .contact-info { text-align: center; margin-top: 20px; font-size: 18px; }
+    .contact-info a { color: #0074d9; font-weight: bold; transition: color 0.3s; }
+    .contact-info a:hover { color: #0056a0; }
+
+    footer {
+      background: #222; color: white; text-align: center; padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .services { flex-direction: column; align-items: center; }
+      nav ul { flex-direction: column; align-items: center; gap: 10px; }
+    }
+
+    /* إخفاء اللغة الإنجليزية في البداية */
+    .lang-en { display: none; direction: ltr; text-align: left; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>شركة أنوار الهدى المحدودة</h1>
+  <nav>
+    <ul>
+      <li><a href="#about" class="lang-ar">من نحن</a><a href="#about" class="lang-en">About Us</a></li>
+      <li><a href="#services" class="lang-ar">خدماتنا</a><a href="#services" class="lang-en">Our Services</a></li>
+      <li><a href="#contact" class="lang-ar">تواصل معنا</a><a href="#contact" class="lang-en">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="lang-toggle" onclick="toggleLang()">EN / AR</div>
+</header>
+
+<section class="hero">
+  <h2 class="lang-ar">مرحبا بكم في شركة أنوار الهدى المحدودة</h2>
+  <p class="lang-ar">نحن نقدم أفضل الخدمات في مجالات الأعمال المختلفة بخبرة وجودة عالية.</p>
+  <h2 class="lang-en">Welcome to Anwar Alhuda Co. Ltd</h2>
+  <p class="lang-en">We provide the best business services with experience and high quality.</p>
+</section>
+
+<section id="about" class="section">
+  <h2 class="lang-ar">من نحن</h2>
+  <p class="lang-ar" style="max-width:800px; margin:auto; text-align:center;">
+    شركة أنوار الهدى المحدودة متخصصة في تقديم حلول وخدمات احترافية في مجالات متعددة، ونسعى دائمًا لتحقيق أعلى معايير الجودة والتميز لعملائنا.
+  </p>
+  <h2 class="lang-en">About Us</h2>
+  <p class="lang-en" style="max-width:800px; margin:auto; text-align:center;">
+    Anwar Alhuda Co. Ltd specializes in providing professional solutions and services in multiple fields, always striving to achieve the highest standards of quality and excellence for our clients.
+  </p>
+</section>
+
+<section id="services" class="section">
+  <h2 class="lang-ar">خدماتنا</h2>
+  <h2 class="lang-en">Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3 class="lang-ar">خدمة 1</h3>
+      <p class="lang-ar">وصف مختصر للخدمة الأولى التي نقدمها.</p>
+      <h3 class="lang-en">Service 1</h3>
+      <p class="lang-en">Short description of our first service.</p>
+    </div>
+    <div class="service">
+      <h3 class="lang-ar">خدمة 2</h3>
+      <p class="lang-ar">وصف مختصر للخدمة الثانية.</p>
+      <h3 class="lang-en">Service 2</h3>
+      <p class="lang-en">Short description of our second service.</p>
+    </div>
+    <div class="service">
+      <h3 class="lang-ar">خدمة 3</h3>
+      <p class="lang-ar">وصف مختصر للخدمة الثالثة.</p>
+      <h3 class="lang-en">Service 3</h3>
+      <p class="lang-en">Short description of our third service.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2 class="lang-ar">تواصل معنا</h2>
+  <h2 class="lang-en">Contact Us</h2>
+  <form>
+    <input type="text" placeholder="الاسم / Name" required>
+    <input type="email" placeholder="البريد الإلكتروني / Email" required>
+    <textarea rows="5" placeholder="رسالتك / Message" required></textarea>
+    <button type="submit">إرسال / Send</button>
+  </form>
+  <div class="contact-info">
+    <p>📧 <a href="mailto:anwaralhudaprint@gmail.com">anwaralhudaprint@gmail.com</a> | 📱 <a href="tel:0595967843">0595967843</a></p>
+  </div>
+</section>
+
+<footer>
+  <p class="lang-ar">جميع الحقوق محفوظة © 2026 شركة أنوار الهدى المحدودة</p>
+  <p class="lang-en">All rights reserved © 2026 Anwar Alhuda Co. Ltd</p>
+</footer>
+
+<script>
+let currentLang = 'ar';
+function toggleLang() {
+  if(currentLang === 'ar'){
+    document.querySelectorAll('.lang-ar').forEach(el=>el.style.display='none');
+    document.querySelectorAll('.lang-en').forEach(el=>el.style.display='block');
+    document.body.style.direction='ltr';
+    currentLang='en';
+  }else{
+    document.querySelectorAll('.lang-ar').forEach(el=>el.style.display='block');
+    document.querySelectorAll('.lang-en').forEach(el=>el.style.display='none');
+    document.body.style.direction='rtl';
+    currentLang='ar';
+  }
+}
+// إظهار العربية عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.lang-ar').forEach(el=>el.style.display='block');
+  document.querySelectorAll('.lang-en').forEach(el=>el.style.display='none');
+  document.body.style.direction='rtl';
+});
+</script>
+
+</body>
+</html>
